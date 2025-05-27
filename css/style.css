@@ -107,7 +107,13 @@ section {
     height: 350px;
     display: block; 
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
+
+.img_happy:hover {
+    transform: scale(1.05);
+}
+
 .home_text {
     max-width: 500px;
     display: flex;
@@ -115,23 +121,37 @@ section {
     justify-content: center;  
     height: 350px;   
 }
-.home_text h2 {
-    margin: 0;
-    font-size: 2.5rem; 
-    word-break: break-word; 
-    line-height: 1.2;
+
+.text_efect_wave span {
+  animation: 2s wave infinite;
+  color: white !important;
+  display: inline-block;
+  animation-delay: calc(0.1s * var(--i));
 }
+
+@keyframes wave {
+  0%, 40%, 100% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-15px);
+  }
+}
+
+.text_efect_wave .text_second {
+    animation: none;
+    color: #79D7BE !important;
+    position: relative;
+    font-size: inherit; 
+}
+
 .home_text p {
     margin-top: 30px;
     font-size: 18px;
     text-align: justify;
 }
-.home_text h2 span {
-    color: #79D7BE;
-    position: relative;
-    font-size: inherit; /* Take the size of the h2 to avoid mismatches */
-    word-break: break-word;
-}
+
+
 /* Second section about me */
 .about_slide {
     display: flex;             
@@ -379,6 +399,24 @@ section {
     font-weight: bold;
     margin-top: 40px;
 }
+
+
+@keyframes swing {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(1.5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+  
+.img_happy {
+    animation: swing 3s ease-in-out infinite;
+}
+
 
 /* Media Query for small screens */
 @media (max-width: 768px) {
