@@ -424,7 +424,7 @@ section {
 }
 .news_circles_wrapper {
     position: relative;
-    width: 300px;
+    width: 275px;
     height: 300px;
     flex-shrink: 0;
 }
@@ -541,9 +541,9 @@ section {
     transform: rotateX(90deg) translateZ(-130px); 
     filter: blur(14px); 
     box-shadow: 
-      0 0 100px #008b8b,
-      0 0 160px #008b8b,
-      0 0 220px #1c9797;
+        0 0 100px #008b8b,
+        0 0 160px #008b8b,
+        0 0 220px #1c9797;
 }
 .activity {
     display: flex;
@@ -735,8 +735,12 @@ section {
         font-size: 2rem;
     }
     /* Fifth section contact */
-    .news_card_3D{
-        width: 349px;
+    .news_card_3D {
+        width: 100%;          
+        max-width: none;    
+        padding: 10px 15px;  
+        /* margin: 0 auto;     */  
+        box-sizing: border-box;
     }
     .news_card {
         flex-direction: column;
@@ -745,7 +749,7 @@ section {
         justify-content: center;
     }
     .news_circles_wrapper{
-        height:160px;
+        height:220px;
     }
     .circle_container {
         margin-left: 14vh;
