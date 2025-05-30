@@ -46,11 +46,18 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4e9e8;
     color: #454a4e;
-    letter-spacing: 5px;
     padding: 20px;
     /* margin: 20px 10px; */
     font-weight: bold;
 }
+
+.left_container h4 {
+    letter-spacing: 1.5px; /* espacio pequeño, legible */
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
 
 .telephone {
     display: flex;
@@ -119,9 +126,9 @@ body {
 
 .title_ed {
     font-weight: bold;
-    margin-bottom: 20px;
-    font-size: 13px;
-    letter-spacing: 1px;
+    margin: 10px 0 15px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
 }
 
 .uni_ed {
@@ -133,18 +140,28 @@ body {
 .course_ed {
     font-weight: bold;
     font-size: 13px;
+    margin-bottom: 100px;
+}
+
+.abilities ul {
+    padding-left: 0;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px 16px;
+}
+
+.abilities li {
+    font-size: 12px;
+    font-weight: lighter;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.abilities li:last-child {
     margin-bottom: 40px;
 }
 
-.abilities h5 {
-    display: block;
-    font-size: 13px;
-    letter-spacing: 0px;
-    margin-bottom: 10px;
-    
-}
-
-/* Selecciona el último h5 que sea hijo directo dentro de .abilities */
 .abilities h5:last-child {
     margin-bottom: 40px;
 }
@@ -302,4 +319,83 @@ margin-top: 40px;
 
 .phone {
     font-weight: lighter;
+}
+
+@media (max-width: 1197px) {
+    .complete_container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left_container, .right_container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .content_title {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left_container {
+        width: 100%;
+        padding: 15px 20px;
+        box-sizing: border-box;
+    }
+
+    .left_container h4 {
+        font-size: 16px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .telephone,
+    .mail,
+    .location,
+    .education,
+    .language {
+        flex-direction: row;
+        align-items: flex-start;
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    .tel_img,
+    .mail_img,
+    .location_img {
+        width: 18px;
+        margin-right: 10px;
+    }
+
+    .left_container h5 {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .abilities ul {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .abilities li {
+        font-size: 13px;
+    }
+
+    .especifi_spanish,
+    .especifi_english {
+        flex-direction: column;
+        font-size: 13px;
+    }
+
+    .course_ed {
+        margin-bottom: 30px;
+    }
+
+    .right_container {
+        width: 100%;
+        padding: 15px 20px;
+        box-sizing: border-box;
+    }
 }
