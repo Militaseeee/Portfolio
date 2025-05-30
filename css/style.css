@@ -213,7 +213,15 @@ section {
 }
 .button_about:hover {
     background-color: #333333;
-}   
+}
+.button_about::after {
+    content: " ➤";
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+.button_about:hover::after {
+    transform: translateX(6px);
+}
 /* Third section projects */
 #projects {
     padding: 50px;
@@ -265,10 +273,20 @@ section {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+    align-items: center;
 }
 .button_python:hover {
     background-color: #5bbfa7; 
 }   
+.button_python::after {
+    content: " ➤";
+    font-size: 1rem;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+.button_python:hover::after {
+    transform: translateX(6px);
+}
 /* Fourth section contact */
 .container {
     max-width: 1200px;
@@ -582,7 +600,15 @@ section {
 .button_new:hover {
     background-color: #5bbfa7; 
 }  
-
+.button_new::after {
+    content: " ➤";
+    font-size: 1rem;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+.button_new:hover::after {
+    transform: translateX(6px);
+}
 /* Footer */
 .footer {
     background-color: #2E5077; 
