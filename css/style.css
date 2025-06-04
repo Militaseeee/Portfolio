@@ -612,8 +612,7 @@ section {
     transform: translateX(6px);
 }
 
-
-
+/* Sixth section contact */
 #design_lab {
     padding: 50px;
     text-align: center;
@@ -623,7 +622,6 @@ section {
     margin-bottom: 30px;
     color: #333333;
 }
-
 .card_design {
     display: flex;
     flex-wrap: wrap;
@@ -632,7 +630,6 @@ section {
     /* padding: 2rem; */
     box-sizing: border-box;
 }
-
 .card_new_design {
     display: flex;
     border-radius: 15px;
@@ -645,11 +642,10 @@ section {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
 .figma_design {
     display: grid;
     grid-template-rows: auto 1fr; /* Creates two rows: first adjusts to content height, second takes remaining space */
-    grid-template-columns: 1fr 2fr; /* Two columns: first takes 1 part, second takes 2 parts of available width */
+    grid-template-columns: 3fr 5fr; /* Two columns: first takes 3 part, second takes 5 parts of available width */
     gap: 5px;
     width: 100%;
     height: 100%;
@@ -657,7 +653,6 @@ section {
     align-items: center;
     justify-items: center;
 }
-
 .img_login {
     grid-column: 1 / 3; /* occupies in all row */
     grid-row: 1 / 2;
@@ -665,27 +660,33 @@ section {
     justify-content: center;
     align-items: center;
 }
-
 .img_login img {
     max-width: 100%;
     object-fit: contain; /* Keeps the aspect ratio while scaling to fit */
+    border-radius: 5px;
 }
-
-
 .img_sign {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     display: flex; /* Enables flexbox for alignment */
     justify-content: flex-start;
     align-items: center;
+
+    background-image: url(../img/sign_up.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
     width: 100%;
-}
-
-.img_sign img {
-    max-height: 225px;
+    height: 226px;
+    max-height: 100%;
     object-fit: contain;
+    border-radius: 5px;
 }
-
+/* .img_sign img {
+    max-height: 226px;
+    object-fit: contain;
+    border-radius: 5px;
+} */
 .text_button_group {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -699,31 +700,39 @@ section {
     height: 100%;
     width: 100%;
     padding: 20px;
-    
+    border-radius: 5px;
 }
-
 .text_button_group h3 {
     display: flex;
     color: white;
 }
-
 .text_button_group p {
     font-size: 18px;
     color: black;
     text-align: justify;
 }
-
 .button_dl {
-    padding: 6px 14px;
+    padding: 8px 18px;
     background-color: #000000; 
     color: white;
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.8s ease;
+    font-size: 18px;
+    font-weight: bold;
 }
-
 .button_dl:hover {
     background-color: #5bbfa7;
+}
+.button_dl::after {
+    content: " ➤";
+    font-size: 1rem;
+    transition: transform 0.3s;
+    display: inline-block;
+    margin-left: 8px;
+}
+.button_dl:hover::after {
+    transform: translateX(6px);
 }
 
 
@@ -946,7 +955,6 @@ section {
         /* margin: 0 auto;     */  
         box-sizing: border-box;
     }
-
     .news_card_small {
         width: 100%;          
         max-width: none;    
@@ -1009,7 +1017,6 @@ section {
         max-width: 90%;
         margin-bottom: 0.8vh;
     }
-
     .activity {
         width: 100%;          
         max-width: none;    
@@ -1017,7 +1024,6 @@ section {
         box-sizing: border-box;
         flex-direction: column;
     }
-
     .news_text p {
         font-size: 13px;
         margin-top: -6vh;
@@ -1038,6 +1044,73 @@ section {
         padding: 6px 30px;
         font-size: 1rem;
         white-space: nowrap;
+    }
+    /* Sixth section contact */
+    #design_lab {
+        padding: 50px;
+        text-align: center;
+    }
+
+    #design_lab h2 {
+        font-size: 2rem;
+    }
+
+    .card_design {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card_new_design {
+        flex: 1 1 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .figma_design {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .img_login {
+        justify-content: center;
+    }
+    .img_sign {
+        background-image: url("../img/sign_large.png");
+        background-size: 100% auto; 
+        background-repeat: no-repeat;
+        background-position: center top;
+        width: 100%;
+        height: 260px;
+        max-height: 200px;
+    }
+
+      /* .img_sign img {
+      max-width: 100%;
+      } */
+
+    .text_button_group {
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text_button_group p {
+        font-size: 16px;
+    }
+
+    .grid_design {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .items {
+        height: 90px;
+    }
+
+    .third {
+        height: auto;
     }
 }
 
