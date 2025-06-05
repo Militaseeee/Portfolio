@@ -734,9 +734,7 @@ section {
 .button_dl:hover::after {
     transform: translateX(6px);
 }
-
-
-
+/* Start second card about grid */
 .grid_design {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -745,56 +743,45 @@ section {
     height: 100%;
     box-sizing: border-box;
 }
-
 .items {
     height: 103px;
     border-radius: 5px;
     /* border: 1px solid black; */
 }
-
 .first {
     background-color: #ff4944;
     grid-column: 1 / 5;
 }
-
 .second {
     background-color: #ff4944;
     grid-column: 5 / 8;
 }
-
 .third {
     background-color: #ffa930;
     grid-column: 1 / 4;
     grid-row: span 2;
     height: 215px;
 }
-
 .fourth {
     background-color: #9c0579;
     grid-column: 4 / 8;
 }
-
 .fifth {
     background-color: #9c0579;
     grid-column: 4 / 8;
 }
-
 .sixth {
     background-color: #01748f;
     grid-column: 1 / 3;
 }
-
 .seventh {
     background-color: #01748f;
     grid-column: 3 / 6;
 }
-
 .eighth {
     background-color: #01748f;
     grid-column: 6 / 8;
 }
-
-
 
 /* Footer */
 .footer {
@@ -815,7 +802,6 @@ section {
     word-break: break-word; 
 }
 
-
 @keyframes swing {
     0% {
         transform: rotate(0deg);
@@ -831,7 +817,6 @@ section {
 .img_happy {
     animation: swing 3s ease-in-out infinite;
 }
-
 
 /* Media Query for small screens */
 @media (max-width: 768px) {
@@ -1050,22 +1035,18 @@ section {
         padding: 50px;
         text-align: center;
     }
-
     #design_lab h2 {
         font-size: 2rem;
     }
-
     .card_design {
         flex-direction: column;
         gap: 20px;
     }
-
     .card_new_design {
         flex: 1 1 100%;
         height: auto;
         padding: 20px;
     }
-
     .figma_design {
         display: flex;
         flex-direction: column;
@@ -1073,7 +1054,6 @@ section {
         height: 100%;
     box-sizing: border-box;
     }
-
     .img_login {
         justify-content: center;
     display: flex;
@@ -1086,31 +1066,24 @@ section {
         width: 100%;
         
     }
-
-    /* .img_sign img {
-    max-width: 100%;
-    } */
-
     .text_button_group {
         width: 100%;
         padding: 10px;
         align-items: center;
         text-align: center;
     }
-
     .text_button_group p {
         font-size: 16px;
     }
 
+    /* Start second card about grid */
     .grid_design {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
     }
-
     .items {
         height: 90px;
     }
-
     .third {
         height: auto;
     }
@@ -1240,9 +1213,7 @@ section {
         /* margin: 0.5rem auto; */
     }
 
-
-
-
+    /* Sixth section contact */
     #design_lab {
         padding: 40px 20px;
     }
@@ -1309,7 +1280,7 @@ section {
     }
 
     .first {
-        grid-column: 1 / 5; /* Ocupa las 4 columnas */
+        grid-column: 1 / 5; 
     }
 
     .second {
@@ -1317,13 +1288,13 @@ section {
     }
 
     .third {
-    grid-column: 1 / 4; /* 2 columnas */
+    grid-column: 1 / 4;
     grid-row: span 2;
     /* height: 215px; */
     }
 
     .fourth {
-      grid-column: 4 / 8; /* 2 columnas */
+        grid-column: 4 / 8; 
     }
 
     .fifth {
